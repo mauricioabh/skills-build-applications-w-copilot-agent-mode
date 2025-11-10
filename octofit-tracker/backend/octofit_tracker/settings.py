@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 # Third-party apps for the OctoFit project
 INSTALLED_APPS += [
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
     'dj_rest_auth',
     'django.contrib.sites',
