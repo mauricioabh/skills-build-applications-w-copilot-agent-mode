@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*ja*jv1bz^(g7^8@p^)mv#(w+5bdfdj+46!7wn1a_)_ls!^9do
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,14 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
-# Third-party apps for the OctoFit project
-INSTALLED_APPS += [
+    'octofit_tracker',
+    # Third-party apps for the OctoFit project
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
     'dj_rest_auth',
-    'django.contrib.sites',
+    # 'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -94,11 +93,13 @@ DATABASES = {
     }
 }
 
-# django-allauth / sites framework
-SITE_ID = 1
+# SITE_ID = 1
 
 # CORS (development-friendly default)
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = ['*']
+CORS_ALLOW_METHODS = ['*']
 
 # Django REST Framework default (minimal)
 REST_FRAMEWORK = {
