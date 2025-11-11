@@ -1,0 +1,102 @@
+
+body {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+  color: #22223b;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Logo styles */
+.octofit-logo {
+  height: 48px;
+  margin-right: 16px;
+  vertical-align: middle;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #fff;
+  padding: 4px;
+}
+
+/* Navbar styles */
+.navbar {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%) !important;
+  box-shadow: 0 2px 8px rgba(58,134,255,0.08);
+}
+.navbar-brand, .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.navbar-brand:hover, .navbar-nav .nav-link.active {
+  color: #ffbe0b !important;
+}
+.navbar-nav .nav-link:hover {
+  color: #ffd60a !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #3a0ca3;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Table styles */
+.table {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(58,134,255,0.06);
+}
+.table-primary th {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%);
+  color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f1f3f8;
+}
+.table-hover tbody tr:hover {
+  background-color: #e0eafc;
+}
+
+/* Buttons */
+.btn, .btn-primary {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.btn:hover, .btn-primary:hover {
+  background: linear-gradient(90deg, #8338ec 0%, #3a86ff 100%);
+  color: #ffd60a;
+}
+
+/* Links */
+a, .App-link {
+  color: #3a86ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover, .App-link:hover {
+  color: #8338ec;
+  text-decoration: underline;
+}
+
+/* Card styles */
+.card {
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(58,134,255,0.08);
+  border: none;
+}
+.card-title {
+  color: #3a0ca3;
+}
+.card-body {
+  background: #f8f9fa;
+}

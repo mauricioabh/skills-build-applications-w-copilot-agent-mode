@@ -54,9 +54,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 ]
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    # corsheaders middleware should be high in the stack
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -106,13 +105,21 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = ['*']
 CORS_ALLOW_METHODS = ['*']
 
+
 # Django REST Framework default (minimal)
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ],
 }
+
+
+# (Removed custom reverse patch due to TypeError. Let DRF use default behavior.)
 
 
 # Password validation
